@@ -243,8 +243,12 @@ button {
   left: 0;
   right: 0;
   height: var(--nav-height);
-  z-index: 1000;
+  z-index: 1100;
   transition: all var(--transition-base);
+}
+
+.mobile-overlay {
+  display: none;
 }
 
 .navbar.scrolled {
@@ -762,7 +766,8 @@ button {
   gap: 5px;
   cursor: pointer;
   padding: 4px;
-  z-index: 1100;
+  z-index: 10;
+  position: relative;
 }
 
 .hamburger span {
@@ -801,14 +806,14 @@ button {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 300px;
+    width: min(300px, 85vw);
     height: 100vh;
     background: var(--surface-primary);
     flex-direction: column;
     padding: calc(var(--nav-height) + var(--space-xl)) var(--space-xl) var(--space-xl);
     box-shadow: var(--shadow-2xl);
     transition: right var(--transition-slow);
-    z-index: 1050;
+    z-index: 2;
   }
 
   .nav-links.open,
@@ -842,7 +847,7 @@ button {
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0.4);
-    z-index: 1040;
+    z-index: 1;
     backdrop-filter: blur(4px);
   }
 
