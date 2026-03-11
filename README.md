@@ -1,1 +1,1 @@
-# Placeholder to replace with the concept paper content !
+# This concept will be the focus of the capstone.
